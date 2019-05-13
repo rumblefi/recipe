@@ -1,0 +1,96 @@
+<%- include('./includes/header.ejs') %>
+
+<main class="main">
+
+	<div class="container">
+
+		<h1 class="h1">Add a new Recipe</h1>
+
+		<form action="" class="form" id="form">
+
+			<div class="form__body">
+
+				<div class="form__partial">
+
+					<label for="title" class="form__label">Title</label>
+
+					<input type="text" class="form__field" name="title" id="title" autocomplete="off">
+
+				</div>
+
+				<div class="form__partial">
+
+					<label for="description" class="form__label">Description</label>
+
+					<textarea class="form__field form__field--textarea" name="description" id="description"></textarea>
+
+				</div>
+
+				<div class="form__partial">
+
+					<label for="imageURL" class="form__label">Image URL</label>
+
+					<input type="text" class="form__field" name="imageURL" id="imageURL" autocomplete="off">
+
+				</div>
+
+				<div class="form__partial">
+
+					<div class="form__label">Ingredients</div>
+
+					<div class="form__ingridients">
+
+						<div class="form__ingidient-wrapper" style="display: none;">
+
+							<input type="text" class="form__field form__field--ingredient" autocomplete="off">
+
+							<div class="form__ingidient-close"></div>
+
+						</div>
+
+						<div class="form__ingidient-wrapper">
+
+							<input type="text" class="form__field form__field--ingredient" name="ingredient0"
+								autocomplete="off">
+
+							<div class="form__ingidient-close"></div>
+
+						</div>
+
+					</div>
+
+					<button class="button button--1 form__ingidient-button" type="button">Add
+						ingredient</button>
+
+				</div>
+
+				<div class="form__partial">
+
+					<label for="instructions" class="form__label">Instructions</label>
+
+					<textarea name="instructions" id="instructions"
+						class="form__field form__field--textarea"></textarea>
+
+				</div>
+
+			</div>
+
+			<div class="form__buttons">
+
+				<button class="button button--1">Add Recipe</button>
+
+				<a href="index.html" class="button button--3">Back</a>
+
+			</div>
+
+		</form>
+
+	</div>
+
+</main>
+
+</div>
+
+</div>
+
+<%- include('./includes/footer.ejs') %>
