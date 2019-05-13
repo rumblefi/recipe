@@ -1,5 +1,5 @@
-const Post = require('./post')
+const Recipe = require('./recipe')
 
 module.exports = {
-	Post
+	Recipe
 }

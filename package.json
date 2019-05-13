@@ -12,7 +12,9 @@
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "mongoose": "^5.5.7",
-    "static-asset": "^0.6.0"
+    "mongoose-url-slugs": "^1.0.2",
+    "static-asset": "^0.6.0",
+    "transliter": "^2.2.1"
   },
   "devDependencies": {
     "nodemon": "^1.19.0"

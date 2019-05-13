@@ -4,6 +4,7 @@ const path = require('path')
 const staticAsset = require('static-asset')
 const config = require('./config')
 const routes = require('./routes/index')
+const models = require('./models/index')
 
 // express
 const app = express()
@@ -15,7 +16,13 @@ app.use(staticAsset(path.join(__dirname,'public')))
 app.use(express.static(path.join(__dirname,'public')))
 
 //routers
-app.get('/', (req,res) => res.render('index'))
+app.get('/', (req,res) => {
+	return models.Recipe.find({})
+		.then( recipes => {
+			return res.render('index', {recipes})
+		})
+		.catch(console.log)
+})
 app.use('/recipe', routes.recipe)
 
 

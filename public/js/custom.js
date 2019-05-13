@@ -74,10 +74,12 @@ $(function () {
 				contentType: 'application/json',
 				url: '/recipe/add'
 			})
-			.done(function(data){
-				console.log(data)
+			.done( data => {
+				if(data.ok) {
+					$(location).attr('href','/')
+				}
 			})
-			.fail(console.log)
+			.fail( () => alert('Произошла ошибка при отправке формы!') )
 
 		}
 	}

@@ -8,28 +8,40 @@
 
 		<div class="recipes">
 
-			<div class="recipe">
+			<% if(recipes.length > 0) {%>
 
-				<img src="https://hips.hearstapps.com/del.h-cdn.co/assets/18/11/2048x1024/landscape-1520957481-grilled-salmon-horizontal.jpg?resize=1200:*"
-					alt="">
-
-				<div class="recipe__body">
-
-					<a href="recipe.html" class="recipe__title">Expresso Express</a>
-
-					<div class="recipe__short-descr">A strong punch to the mind</div>
-
-					<div class="recipe__buttons">
-
-						<a href="form.html" class="button button--1 recipe__button">Edit</a>
-
-						<button class="button button--2 recipe__button js-delete-recipe">Delete</button>
-
+				<% recipes.forEach(function(recipe) { %>
+	
+					<div class="recipe">
+	
+						<img src="<%=recipe.imageURL%>"
+							alt="">
+	
+						<div class="recipe__body">
+	
+							<a href="" class="recipe__title"><%=recipe.title%></a>
+	
+							<div class="recipe__short-descr"><%=recipe.description%></div>
+	
+							<div class="recipe__buttons">
+	
+								<a href="" class="button button--1 recipe__button">Edit</a>
+	
+								<button class="button button--2 recipe__button js-delete-recipe">Delete</button>
+	
+							</div>
+	
+						</div>
+	
 					</div>
+				
+				<% }) %>
 
-				</div>
+			<% } else {%>
 
-			</div>
+				<p>No recipes</p>
+			
+			<% } %>
 
 		</div>
 
