@@ -3,6 +3,7 @@ const bodyParser = require('body-parser')
 const path = require('path')
 const staticAsset = require('static-asset')
 const config = require('./config')
+const routes = require('./routes/index')
 
 // express
 const app = express()
@@ -15,6 +16,8 @@ app.use(express.static(path.join(__dirname,'public')))
 
 //routers
 app.get('/', (req,res) => res.render('index'))
+app.use('/recipe', routes.recipe)
+
 
 //catch 404 and forward to error handler
 app.use( (req,res,next) => {
