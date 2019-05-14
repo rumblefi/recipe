@@ -16,15 +16,15 @@ app.use(staticAsset(path.join(__dirname,'public')))
 app.use(express.static(path.join(__dirname,'public')))
 
 //routers
-app.get('/', (req,res) => {
-	return models.Recipe.find({})
-		.then( recipes => {
-			return res.render('index', {recipes})
-		})
-		.catch(console.log)
-})
+// app.get('/', (req,res) => {
+// 	return models.Recipe.find({})
+// 		.then( recipes => {
+// 			return res.render('index', {recipes})
+// 		})
+// 		.catch(console.log)
+// })
 app.use('/recipe', routes.recipe)
-app.use('/archive', routes.archive)
+app.use('/', routes.archive)
 
 
 //catch 404 and forward to error handler
