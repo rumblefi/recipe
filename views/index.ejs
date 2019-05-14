@@ -43,6 +43,22 @@
 			
 			<% } %>
 
+			<div class="pagination">
+
+				<% if( current > 1)  {%>
+
+					<a href="/archive/<%= Number(current) - 1 %>" class="pagination__link">&#8592; Назад</a>
+
+				<%  } %>
+
+				<% if( pages > 0 && current < pages )  {%>
+
+					<a href="/archive/<%= Number(current) + 1 %>" class="pagination__link">Вперед &#8594;</a>
+
+				<%  } %>
+
+			</div>
+
 		</div>
 
 	</div>

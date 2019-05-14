@@ -24,6 +24,7 @@ app.get('/', (req,res) => {
 		.catch(console.log)
 })
 app.use('/recipe', routes.recipe)
+app.use('/archive', routes.archive)
 
 
 //catch 404 and forward to error handler

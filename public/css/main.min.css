@@ -3,3 +3,18 @@ body.compensate-for-scrollbar{overflow:hidden}.fancybox-active{height:auto}.fanc
 .error-button{
 	display: inline-flex;
 }
+
+.pagination{
+	display: flex;
+	align-items: center;
+}
+
+.pagination__link{
+	display: flex;
+	align-items: center;
+	margin-right: 25px;
+}
+
+.pagination__link:last-child{
+	margin-right: 0;
+}
