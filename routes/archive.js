@@ -10,7 +10,7 @@ function recipes(req, res) {
 	models.Recipe.find({}).skip(perPage * page - perPage)
 		.limit(perPage)
 		.then(recipes => {
-			models.Recipe.count()
+			models.Recipe.countDocuments()
 				.then(count => {
 					res.render('index', {
 						recipes,
@@ -18,9 +18,9 @@ function recipes(req, res) {
 						pages: Math.ceil(count / perPage)
 					})
 				})
-				.catch(console.log)
+				.catch(console.error)
 		})
-		.catch(console.log)
+		.catch(console.error)
 }
 
 router.get('/', (req,res) => recipes(req, res))
